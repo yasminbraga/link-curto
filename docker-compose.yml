@@ -1,0 +1,19 @@
+version: '3.9'
+
+services:
+  postgres:
+    container_name: postgres_short_link
+    hostname: postgres
+    restart: always
+    image: postgres:13-alpine
+    environment:
+      POSTGRES_DB: 'link_curto'
+      POSTGRES_USER: 'link_curto'
+      POSTGRES_PASSWORD: 'link_curto'
+    ports:
+      - 5432:5432
+    volumes:
+      - link_curto_data:/var/lib/postgresql/data
+
+volumes:
+  link_curto_data:
