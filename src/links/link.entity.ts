@@ -10,4 +10,7 @@ export class Link {
 
   @Column()
   url: string;
+
+  @Column()
+  url2: string;
 }
