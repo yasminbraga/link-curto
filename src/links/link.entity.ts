@@ -1,6 +1,6 @@
 import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
 
-@Entity('links')
+@Entity({ name: 'links' })
 export class Link {
   @PrimaryGeneratedColumn()
   id: number;
@@ -10,7 +10,4 @@ export class Link {
 
   @Column()
   url: string;
-
-  @Column()
-  url2: string;
 }
