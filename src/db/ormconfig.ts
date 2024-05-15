@@ -10,12 +10,11 @@ export const dataSourceOptions: DataSourceOptions = {
   database: process.env.PG_NAME || 'link_curto',
   synchronize: false,
   logging: true,
-  entities: [resolve(__dirname, 'src/**/*.entity{.ts,.js}')],
+  entities: [resolve(__dirname, '/**/*.entity{.ts,.js}')],
   migrations: [resolve(__dirname, 'src/db/migrations/*{.ts,.js}')],
   migrationsTableName: 'migrations',
   migrationsRun: true,
 };
 
 const dataSource = new DataSource(dataSourceOptions);
-console.log(process.env.PG_USER);
 export default dataSource;
