@@ -22,7 +22,7 @@ export class LinksController {
     //salvar a url e identificador no banco
     const newLink = await this.linksService.create({ url, shortId });
     //retornar a url curta
-    const shortUrl = `http://localhost:3333/links/${newLink.shortId}`;
+    const shortUrl = `https://link-curto.up.railway.app/links/${newLink.shortId}`;
     return shortUrl;
   }
 }
