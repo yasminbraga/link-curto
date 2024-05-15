@@ -10,7 +10,7 @@ export const dataSourceOptions: DataSourceOptions = {
   database: process.env.PG_NAME || 'link_curto',
   synchronize: false,
   logging: true,
-  entities: [resolve(__dirname, '/**/*.entity{.ts,.js}')],
+  entities: [__dirname + '/**/*.entity{.ts,.js}'],
   migrations: [resolve(__dirname, 'src/db/migrations/*{.ts,.js}')],
   migrationsTableName: 'migrations',
   migrationsRun: true,
